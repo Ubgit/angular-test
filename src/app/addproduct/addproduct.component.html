@@ -1,0 +1,18 @@
+<h1>Ajout produit</h1>
+
+<ul>
+  <li *ngFor="let product of products; let i = index">
+    {{ product.name }} - {{ product.price | currency }}
+    <button (click)="deleteProduct(i, $event)" class="delete-button">X</button>
+  </li>
+</ul>
+
+<form (ngSubmit)="addProduct(productName.value, productPrice.valueAsNumber, $event)">
+  <label for="name">Product Name:</label>
+  <input type="text" id="name" #productName required />
+
+  <label for="price">Product Price:</label>
+  <input type="number" id="price" #productPrice required />
+
+  <button type="submit">Add</button>
+</form>

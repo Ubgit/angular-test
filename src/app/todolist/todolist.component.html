@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>TODO LIST</h1>
+
+  <p>Il y a actuellement {{ values().length }} tasks !</p>
+
+  <input
+    type="text"
+    [(ngModel)]="inputValue"
+    (keydown.enter)="addValue()"
+    placeholder="Entrez une valeur"
+    class="input-field"
+  />
+
+  <button (click)="addValue()">Add</button>
+
+  <ul>
+    <li *ngFor="let value of values(); let i = index">
+      {{ value }}
+      <button (click)="deleteValue(i,$event)" class="delete-button">Delete</button>
+    </li>
+  </ul>
+
+  <!-- Bouton de tri -->
+  <button (click)="sortValues()" class="sort-button">Sort</button>
+</div>

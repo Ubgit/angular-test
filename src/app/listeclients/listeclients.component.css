@@ -1,0 +1,53 @@
+/* listeclients.component.css */
+
+/* Style de base du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style des en-têtes de colonnes */
+thead th {
+    background-color: #1976d2;
+    /* Couleur inspirée du bleu d'Angular */
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #0d47a1;
+}
+
+/* Style des cellules */
+td,
+th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    /* Tracé des lignes */
+}
+
+/* Ligne de couleur alternée pour les lignes impaires */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Couleur de fond au survol */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Bouton d'édition */
+button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0d47a1;
+}

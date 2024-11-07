@@ -1,0 +1,60 @@
+<!-- listeclients.component.html -->
+<div>
+  <h2>Liste des Clients</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Num SS</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Adresse</th>
+        <th>Ville</th>
+        <th>Pays</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td>{{ client.numss }}</td>
+        <td>{{ client.nom }}</td>
+        <td>{{ client.prenom }}</td>
+        <td>{{ client.adresse }}</td>
+        <td>{{ client.ville }}</td>
+        <td>{{ client.pays }}</td>
+        <td><button (click)="onEdit(client)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="clientToEdit">
+  <h3>Edit Client</h3>
+  <form>
+    <label
+      >Num SS:
+      <input [(ngModel)]="clientToEdit.numss" name="numss" />
+    </label>
+    <label
+      >Nom:
+      <input [(ngModel)]="clientToEdit.nom" name="nom" />
+    </label>
+    <label
+      >Prénom:
+      <input [(ngModel)]="clientToEdit.prenom" name="prenom" />
+    </label>
+    <label
+      >Adresse:
+      <input [(ngModel)]="clientToEdit.adresse" name="adresse" />
+    </label>
+    <label
+      >Ville:
+      <input [(ngModel)]="clientToEdit.ville" name="ville" />
+    </label>
+    <label
+      >Pays:
+      <input [(ngModel)]="clientToEdit.pays" name="pays" />
+    </label>
+    <!--button type="button" (click)="onUpdate()">Update</button-->
+    <button type="button" (click)="onAdd()">Add</button>
+  </form>
+</div>

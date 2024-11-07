@@ -1,0 +1,186 @@
+/* Style de la zone principale */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Titre */
+h1 {
+    font-family: Arial, sans-serif;
+    color: #dd0031;
+    margin-bottom: 1rem;
+}
+
+/* Style pour les paragraphes */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 1rem 0;
+    background-color: #f1f1f1;
+    padding: 0.8rem;
+    border-radius: 4px;
+}
+
+/* Conteneur pour l'entrée et le bouton */
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Champ de saisie prend tout l'espace disponible sauf le bouton */
+.input-field {
+    flex: 1;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px 0 0 4px;
+    /* Bord arrondi uniquement à gauche */
+    margin-right: -1px;
+    /* Pour éviter un double bord avec le bouton */
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    /* Bord arrondi uniquement à droite */
+    cursor: pointer;
+    background-color: #1976d2;
+    margin-left: 1rem;
+    /* Ajoute un espace entre l'input et le bouton */
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #155a9e;
+}
+
+.input-field:focus {
+    border-color: #1976d2;
+    outline: none;
+    box-shadow: 0 0 4px rgba(25, 118, 210, 0.4);
+}
+
+button:hover {
+    background-color: #155a9e;
+}
+
+/* Liste */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+/* Style de chaque élément de la liste avec un bouton */
+li {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Bouton Delete */
+.delete-button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #c62828;
+}
+
+/* Bouton Sort sous la liste, aligné à gauche */
+.sort-button {
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: block;
+    /* S'assure que le bouton prend toute la largeur de son conteneur */
+    text-align: right;
+    /* Aligne le texte à droite */
+}
+
+.sort-button:hover {
+    background-color: #004d40;
+}
+
+/* Disposition en ligne pour chaque champ (label et input) */
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+/* Label et champ de saisie */
+label {
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: bold;
+    margin-right: 1rem;
+    width: 30%;
+    margin-left: 1rem;
+}
+
+.input-field {
+    width: 70%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+}
+
+/* Style du bouton */
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: #fff;
+    transition: background-color 0.3s;
+    margin-left: auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #155a9e;
+}
+
+/* Pour aligner le bouton à droite */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
