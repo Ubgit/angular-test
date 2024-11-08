@@ -1,0 +1,12 @@
+<div>
+  <h3>Votre Panier</h3>
+  <p>Total : {{ totalPrix }}€</p>
+  <ul>
+    <li *ngFor="let produit of produits; let i = index">
+      {{ produit.nom }} - {{ produit.prix }}€
+      <button (click)="onRemoveProduit(produit)">-</button>
+      <span>{{ compterProduit(produit) }}</span>
+      <button (click)="onAddProduit(produit)">+</button>
+    </li>
+  </ul>
+</div>

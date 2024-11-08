@@ -1,0 +1,24 @@
+<div>
+  <h1>Panier de Produits</h1>
+  <button *ngIf="panier.statut === 'Payer'" (click)="changerStatut()">
+    Payer
+  </button>
+  <button *ngIf="panier.statut === 'Payé'" disabled>Payé</button>
+
+  <mat-tab-group>
+    <mat-tab label="Liste des produits">
+      <app-productslist
+        [produits]="produits"
+        (addProduit)="ajouterProduit($event)"
+      ></app-productslist>
+    </mat-tab>
+    <mat-tab label="Panier">
+      <app-cart
+        [produits]="produitsSignal()"
+        [totalPrix]="totalPrix()"
+        (addProduit)="ajouterProduit($event)"
+        (removeProduit)="supprimerProduit($event)"
+      ></app-cart>
+    </mat-tab>
+  </mat-tab-group>
+</div>
